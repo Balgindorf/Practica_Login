@@ -1,15 +1,23 @@
-# Usamos una imagen oficial de PHP con servidor integrado (ideal para desarrollo y prácticas)
-FROM php:8.2-cli
+# 1. Usamos la imagen oficial de PHP con Apache
+FROM php:8.2-apache
 
-# Instalamos las extensiones de MySQL necesarias
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+# 2. Instalar las dependencias del sistema y las extensiones de PostgreSQL para PDO
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Copiamos tu proyecto al contenedor
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
+# 3. Habilitar el módulo de reescritura de Apache (útil para rutas limpias si las usas)
+RUN a2enmod rewrite
 
-# Exponemos el puerto 80 que usa Railway
+# 4. Copiar todos los archivos de tu proyecto al directorio web de Apache
+COPY . /var/www/html/
+
+# 5. Asegurar los permisos correctos para que Apache pueda leer los archivos
+RUN chown -r www-data:www-data /var/www/html
+
+# 6. Exponer el puerto 80 (el puerto por defecto de Apache)
 EXPOSE 80
 
-# Iniciamos el servidor web interno que ya trae PHP instalado
-CMD ["php", "-S", "0.0.0.0:80"]
+# 7. Arrancar Apache en primer plano
+CMD ["apache2-foreground"]
