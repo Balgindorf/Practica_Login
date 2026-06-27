@@ -14,7 +14,7 @@ RUN a2enmod rewrite
 COPY . /var/www/html/
 
 # 5. Asegurar los permisos correctos para que Apache pueda leer los archivos
-RUN chown -r www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 # 6. Exponer el puerto 80 (el puerto por defecto de Apache)
 EXPOSE 80
