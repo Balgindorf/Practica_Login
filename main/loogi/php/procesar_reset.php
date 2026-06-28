@@ -17,7 +17,7 @@ if (empty($token) || empty($password) || empty($confirm_password)) {
         'title' => 'Campos vacíos',
         'message' => 'Completa todos los campos.'
     ];
-    header("Location: /loogi/reset-password.php?token=" . urlencode($token));
+    header("Location: /reset-password.php?token=" . urlencode($token));
     exit;
 }
 
