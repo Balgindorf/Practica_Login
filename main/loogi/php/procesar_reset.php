@@ -27,7 +27,7 @@ if ($password !== $confirm_password) {
         'title' => 'Contraseñas no coinciden',
         'message' => 'Las dos contraseñas ingresadas no son iguales.'
     ];
-    header("Location: /loogi/reset-password.php?token=" . urlencode($token));
+    header("Location: /reset-password.php?token=" . urlencode($token));
     exit;
 }
 
