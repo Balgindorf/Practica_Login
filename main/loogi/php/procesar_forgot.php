@@ -47,7 +47,7 @@ try {
             'expires_at' => $expires_at
         ]);
 
-        $reset_link = "https://practica-login.onrender.com/reset-password.php?token=" . $token;
+        $reset_link = "https://practica-login.onrender.com/reset-password.php?token=" . urlencode($token); // Cambia localhost por tu dominio real
 
         $mail = new PHPMailer(true);
         try {
