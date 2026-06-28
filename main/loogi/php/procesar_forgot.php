@@ -10,7 +10,7 @@ require_once __DIR__ . '/../phpmailer/PHPMailer.php';
 require_once __DIR__ . '/../phpmailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /loogi/forgot-3.php");
+    header("Location:  /forgot-3.php");
     exit;
 }
 
