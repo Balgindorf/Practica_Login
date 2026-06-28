@@ -114,7 +114,7 @@ unset($_SESSION['toast']);
         <div class="login-area section-divide mb-30">
             <div class="container">
                 <div class="forgot-1 sign-in-form">
-                    <form action="/loogi/php/procesar_forgot.php" method="POST">
+                    <form action="/php/procesar_forgot.php" method="POST">
                         <div class="forgot-form-1">
                             <div class="container">
                                 <div class="row">
@@ -134,7 +134,7 @@ unset($_SESSION['toast']);
                                                 <button type="submit" class="default-btn">Continuar</button>
                                             </div>
                                             <br>
-                                            <span>Regresar al <a href="/loogi/login-3.php">inicio de sesión!</a></span>
+                                            <span>Regresar al <a href="/login-3.php">inicio de sesión!</a></span>
                                         </div>
                                     </div>
                                 </div>
