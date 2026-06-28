@@ -155,7 +155,7 @@ unset($_SESSION['toast']);
                                                 <button type="submit" class="default-btn">Restablecer contraseña</button>
                                             </div>
                                             <br>
-                                            <span>Regresar al <a href="login-3.php">inicio de sesión!</a></span>
+                                            <span>Regresar al <a href="/login-3.php">inicio de sesión!</a></span>
                                         </div>
                                     </div>
                                 </div>
