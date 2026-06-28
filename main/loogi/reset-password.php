@@ -2,7 +2,7 @@
 session_start();
 $token = $_GET['token'] ?? '';
 if (empty($token)) {
-    header("Location: /loogi/forgot-3.php");
+    header("Location: /forgot-3.php");
     exit;
 }
 $toast = $_SESSION['toast'] ?? null;
