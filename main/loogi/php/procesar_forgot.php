@@ -86,7 +86,7 @@ try {
         'title' => 'Solicitud enviada',
         'message' => 'Si el correo está registrado, recibirás un enlace para restablecer tu contraseña.'
     ];
-    header("Location: /loogi/forgot-3.php");
+    header("Location: /forgot-3.php");
     exit;
 
 } catch (PDOException $e) {
@@ -95,6 +95,6 @@ try {
         'title' => 'Error del servidor',
         'message' => 'Ocurrió un problema inesperado. Intenta más tarde.'
     ];
-    header("Location: /loogi/forgot-3.php");
+    header("Location: /forgot-3.php");
     exit;
 }
