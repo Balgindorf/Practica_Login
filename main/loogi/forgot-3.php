@@ -114,7 +114,7 @@ unset($_SESSION['toast']);
         <div class="login-area section-divide mb-30">
             <div class="container">
                 <div class="forgot-1 sign-in-form">
-                    <form action="main/loogi/php/procesar_forgot.php" method="POST">
+                    <form action="php/procesar_forgot.php" method="POST">
                         <div class="forgot-form-1">
                             <div class="container">
                                 <div class="row">
