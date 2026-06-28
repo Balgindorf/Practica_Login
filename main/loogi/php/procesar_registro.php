@@ -68,7 +68,7 @@ try {
         'title' => '¡Registro exitoso!',
         'message' => 'Tu cuenta ha sido creada. Ahora puedes iniciar sesión.'
     ];
-    header("Location: /loogi/login-3.php");
+    header("Location: /login-3.php");
     exit;
 
 } catch (PDOException $e) {
