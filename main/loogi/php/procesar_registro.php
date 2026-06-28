@@ -20,7 +20,7 @@ function setErrorToast($title, $message) {
         'title' => $title,
         'message' => $message
     ];
-    header("Location: /loogi/register-3.php");
+    header("Location: /register-3.php");
     exit;
 }
 
