@@ -22,7 +22,7 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         'title' => 'Correo inválido',
         'message' => 'Ingresa un correo electrónico válido.'
     ];
-    header("Location: /loogi/forgot-3.php");
+    header("Location: /forgot-3.php");
     exit;
 }
 
