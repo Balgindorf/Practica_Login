@@ -3,7 +3,7 @@ session_start();
 require_once 'conexion.php'; // Ajusta según tu estructura
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /loogi/forgot-3.php");
+    header("Location: /forgot-3.php");
     exit;
 }
 
@@ -37,7 +37,7 @@ if (strlen($password) < 6) {
         'title' => 'Contraseña débil',
         'message' => 'La contraseña debe tener al menos 6 caracteres.'
     ];
-    header("Location: /loogi/reset-password.php?token=" . urlencode($token));
+    header("Location: /reset-password.php?token=" . urlencode($token));
     exit;
 }
 
@@ -52,7 +52,7 @@ try {
             'title' => 'Token inválido',
             'message' => 'El enlace de restablecimiento no es válido.'
         ];
-        header("Location: /loogi/forgot-3.php");
+        header("Location: /forgot-3.php");
         exit;
     }
 
@@ -62,7 +62,7 @@ try {
             'title' => 'Token ya usado',
             'message' => 'Este enlace ya ha sido utilizado.'
         ];
-        header("Location: /loogi/forgot-3.php");
+        header("Location: /forgot-3.php");
         exit;
     }
 
@@ -72,7 +72,7 @@ try {
             'title' => 'Token expirado',
             'message' => 'El enlace ha caducado. Solicita uno nuevo.'
         ];
-        header("Location: /loogi/forgot-3.php");
+        header("Location: /forgot-3.php");
         exit;
     }
 
@@ -92,7 +92,7 @@ try {
         'title' => 'Contraseña actualizada',
         'message' => 'Tu contraseña se ha cambiado correctamente. Inicia sesión con tu nueva clave.'
     ];
-    header("Location: /loogi/login-3.php");
+    header("Location: /login-3.php");
     exit;
 
 } catch (PDOException $e) {
@@ -101,6 +101,6 @@ try {
         'title' => 'Error del servidor',
         'message' => 'Ocurrió un problema al actualizar la contraseña.'
     ];
-    header("Location: /loogi/reset-password.php?token=" . urlencode($token));
+    header("Location: /reset-password.php?token=" . urlencode($token));
     exit;
 }
