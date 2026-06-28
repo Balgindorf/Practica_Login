@@ -130,7 +130,7 @@ unset($_SESSION['toast']);
         <div class="login-area section-divide mb-30">
             <div class="container">
                 <div class="forgot-1 sign-in-form">
-                    <form action="/loogi/php/procesar_reset.php" method="POST" onsubmit="return validarPasswords()">
+                    <form action="/php/procesar_reset.php" method="POST" onsubmit="return validarPasswords()">
                         <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
                         <div class="forgot-form-1">
                             <div class="container">
@@ -155,7 +155,7 @@ unset($_SESSION['toast']);
                                                 <button type="submit" class="default-btn">Restablecer contraseña</button>
                                             </div>
                                             <br>
-                                            <span>Regresar al <a href="/loogi/login-3.php">inicio de sesión!</a></span>
+                                            <span>Regresar al <a href="login-3.php">inicio de sesión!</a></span>
                                         </div>
                                     </div>
                                 </div>
